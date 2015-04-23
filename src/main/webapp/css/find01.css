@@ -1,0 +1,68 @@
+*{padding:0;margin:0;}
+ul,li{list-style:none;}
+img{border:0;}
+a{text-decoration:none;}
+.header{width:992px;margin:0px auto;}
+.header_menu{position:relative;height:36px;overflow:hidden;background:url(../img/top_bg.jpg) repeat-x;border-bottom:0px;}
+.header_menu .header_nav ul{height:36px;overflow:hidden;}
+.header_menu .header_nav li{float:left;height:36px;line-height:36px;font-size:12px;}
+.header_menu .header_nav li a{color:#267519;padding-left:25px;}
+.header_menu .header_nav li a:hover{text-decoration:underline;}
+
+.header_menu .header_mid {position:absolute;left:720px;height:36px;overflow:hidden;border-bottom:0px;}
+.header_menu .header_mid li{float:left;height:36px;line-height:36px;font-size:12px;}
+.header_menu .header_mid li a{color:#cc6600;padding-left:10px;}
+.header_menu .header_mid li a:hover{text-decoration:underline;}
+
+.header_menu .header_right{position:absolute;left:850px;height:36px;overflow:hidden;border-bottom:0px;}
+.header_menu .header_right li{float:left;height:36px;line-height:36px;font-size:12px;}
+.header_menu .header_right li a{color:#0066cc;padding-left:10px;}
+.header_menu .header_right li a:hover{text-decoration:underline;}
+
+.top_ad{margin:auto;width:992px;height:70px;border:1px;background:url(../img/top_ad_bg.jpg) no-repeat;overflow:hidden;}
+
+.logosearch{position:relative;width:992px;height:130px;margin:0px auto;margin-bottom:10px;}
+.logo{position:relative;left:49px;top:10px;width:213px;height:117px;background-color:transparent;}
+
+.logosearch .search_con{position:absolute;left:270px;height:130px;width:722px;float:left;top:25px;}
+.logosearch .search_con .chengshi{position:absolute;left:70px;top:34px;}
+.logosearch .search_con .dangqian{position:absolute;top:34px;}
+.logosearch .search_con .dangqian li{float:left;font-size:12px;}
+.logosearch .search_con .chengshi li{float:left;font-size:12px;padding-left:7px;}
+.logosearch .search_con .chengshi li a:hover{text-decoration:underline;}
+.logosearch .search_con li a{color:#989ea6;}
+.logosearch .search_con span{color:#FF0000;}
+.logosearch .search_con .kouhao{position:absolute;left:50px;top:77px;float:left;font-size:12px; color:#ff6000;}
+
+
+
+.logosearch .search_con table{clear:both;}
+.logosearch .search_con td span{display:block;border-top:1px solid #86c83e;border-left:1px solid #86c83e;border-bottom:1px solid #86c83e;border-right:1px solid #86c83e;}
+.logosearch .search_con .search_text{position:absolute;left:77px;border-top:1px solid #79a945;border-left:1px solid #79a945;border-bottom:1px solid #79a945;border-right:1px solid #79a945;width:365px;height:26px;padding:0px 3px;line-height:22px;}
+.logosearch .search_con .search_submit1{position:absolute;left:450px;width:63px;height:28px;border-width:0px;background:url(../img/search.jpg);border-top:1px solid #79a945;border-bottom:1px solid #79a945;}
+.logosearch .search_con .search_submit2{position:absolute;left:513px;width:88px;height:28px;border-width:0px;background:url(../img/fabu.jpg);border-top:1px solid #79a945;border-bottom:1px solid #79a945;border-right:1px solid #79a945;}
+
+
+.menu{width:992px;margin:0px auto;height:36px;background:url(../img/menu_bg.jpg) repeat-x;overflow:hidden;border-bottom:2px solid #96c65d;margin-bottom:10px;}
+.menu li{position: relative;left:25px;font-size:16px;height:36px;line-height:36px;font-weight:bold;float:left;padding-left:37px;}
+.menu li a{color:#FFFFFF;font-weight:bold;}
+.menu li  .dangqian {display:inline-block;width:115px;height:33px;background:url(../img/menu.bg.gif) no-repeat;text-align:center;margin-top:3px;}
+.menu li span a{color:#7fdd1a;}
+
+.border{margin:0px auto;width:976px;height:388px;border: 1px solid #7fde1a;}
+
+.menu_butt{margin:0px auto;width:976px;height:28px;}
+.menu_butt li{width:95px;height:28px;line-height:28px;background:url(../img/top_bg.jpg) repeat-x;float:left;text-align:center;}
+.menu_butt li a{color:#95ce5e;}
+
+.border{width:992px;height:485px;margin:0px auto;border:1px solid #86c83e;}
+.border .left{float:left;width:487px;height:483px;padding-left:1px;padding-top:1px;}
+.border .right{float:left;padding-left:15px;width:487px;height:483px;padding-top:1px;}
+.border ul li span{font-size:16px;color:#363636;padding-left:5px;line-height:34px;}
+
+.bottom{margin:0px auto;width:992px;height:40px;padding-top:20px;text-align:center;}
+.bottom ul{color:#666666; display:inline-block; *display:inline; zoom:1;}
+.bottom li{ float:left;padding:1px;height:20px;text-align:center;}
+.bottom li a{color:#727272;}
+.bottom li font{padding-left:4px;color:#999999;}
+.bottom li a:hover{text-decoration:underline;color:#FF0000;}
