@@ -14,33 +14,13 @@
 <link rel="stylesheet" type="text/css" href="css/css.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
 <script type="text/javascript" src="${ctx}/js/jquery.SuperSlide.js"></script>
-<!-- <script type="text/javascript">
-
-    var url = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js';
-
-    $.ajax({  
-        url: url,  
-        type:'get',
-        dataType:"jsonp",  
-        jsonp:"jsonpcallback",  
-        success:function(price){  
-            console.log(price);  
-            alert(price);  
-        }  ,
-        error:function(data){
-        	alert('****');
-        	
-        }
-    }); 
-
-</script> -->
 </head>
 
 <body>
 <div class="header">
     <div class="header_menu">
 		 <ul class="header_nav">
-			  <li><a href="#">北京 [更换] <span id="area"></span></a></li>
+			  <li><a href="#">${session_area }[更换] <span id="area"></span></a></li>
 			  <li><a href="${ctx }/index.do">您好，欢迎来到找丢丢!</a></li>
 		 </ul>
 		 <ul class="header_mid"> 

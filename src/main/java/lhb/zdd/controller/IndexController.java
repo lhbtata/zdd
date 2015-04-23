@@ -1,5 +1,11 @@
 package lhb.zdd.controller;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -30,7 +36,10 @@ public class IndexController {
 	 * @return
 	 */
 	@RequestMapping("index")
-	public String index(HttpSession session) {
+	public String index(HttpSession session,HttpServletRequest request) {
+		String strIP = getIP(request);
+		String city = getAddressByIP(strIP);
+		session.setAttribute("session_area", city);
 		return "index";
 		//return "logout";
 	}
@@ -192,8 +201,49 @@ public class IndexController {
 		}
 		return msn;
 	}
+	/**
+	 * 根据IP获取地理位置
+	 * @param strIP
+	 * @return
+	 */
+	public String getAddressByIP(String strIP)
+	{ 
+	  try
+	  {
+	    //String strIP = "27.205.41.232";
+		if(!strIP.equals("127.0.0.1")){
+			 URL url = new URL( "http://ip.qq.com/cgi-bin/searchip?searchip1=" + strIP); 
+			    URLConnection conn = url.openConnection(); 
+			    BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), "GBK")); 
+			    String line = null; 
+			    StringBuffer result = new StringBuffer(); 
+			    while((line = reader.readLine()) != null)
+			    { 
+			      result.append(line); 
+			    } 
+			    reader.close(); 
+			    strIP = result.substring(result.indexOf( "该IP所在地为：" ));
+			    strIP = strIP.substring(strIP.indexOf( "：") + 1);
+			    String province = strIP.substring(6, strIP.indexOf("省"));
+			    String city = strIP.substring(strIP.indexOf("省") + 1, strIP.indexOf("市"));
+//			    System.out.println(strIP);
+//			    System.out.println(province);
+//			    System.out.println(city);
+			    return city;
+		}else {
+			return "本地测试";
+		}
+	   
+	  }
+	  catch( IOException e)
+	  { 
+	    return "读取失败"; 
+	  }
+	}
 	public static void main(String[] args) {
 		System.out.println(0.03%0.02);
+		IndexController indexController = new IndexController();
+		indexController.getAddressByIP("27.205.41.232");
 	}
 
 }
