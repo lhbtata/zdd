@@ -3,6 +3,7 @@ package lhb.zdd.controller;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -19,6 +20,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import sun.tools.tree.NewArrayExpression;
 
 /**
  * 首页相关controller
@@ -241,7 +244,7 @@ public class IndexController {
 	  }
 	}
 	public static void main(String[] args) {
-		System.out.println(0.03%0.02);
+		System.out.println(0.03*100%(0.02*100));
 		IndexController indexController = new IndexController();
 		indexController.getAddressByIP("27.205.41.232");
 	}
